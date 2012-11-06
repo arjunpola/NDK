@@ -7,16 +7,15 @@ public class Main
 		Medic medic = new Medic();
 		Ghost ghost = new Ghost();
 
-		marine.attack();
-		marine.run();
-		marine.stop();
 
-		medic.repair();
-		medic.stop();
-		medic.run();
+		Unit[] group = new Unit[10];
+		group[0] = marine;
+		group[1] = medic;
+		group[2] = ghost;
 
-		ghost.attack();
-		ghost.stop();
-		ghost.run();
+		for(int i = 0; i < 3; i++) 
+		{
+			group[i].run();
+		}
 	}
 }
