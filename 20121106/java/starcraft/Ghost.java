@@ -1,5 +1,5 @@
 
-public class Ghost extends Unit 
+public class Ghost extends Unit implements Runable 
 {
 
 	public Ghost()

@@ -8,7 +8,7 @@ public class Main
 		Ghost ghost = new Ghost();
 
 
-		Unit[] group = new Unit[10];
+		Runable[] group = new Runable[10];
 		group[0] = marine;
 		group[1] = medic;
 		group[2] = ghost;

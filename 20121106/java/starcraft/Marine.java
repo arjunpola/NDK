@@ -1,5 +1,5 @@
 
-public class Marine extends Unit 
+public class Marine extends Unit implements Runable 
 {
 
 	public Marine()
@@ -19,11 +19,10 @@ public class Marine extends Unit
 	{
 		System.out.println(name +" :Stop!");
 	}
-
+	
 	public void run()
 	{
-		System.out.println(name +"GoGoGo!");
+		System.out.println(name +" :GoGoGo!!");
 	}
-
 
 }

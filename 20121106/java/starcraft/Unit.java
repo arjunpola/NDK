@@ -8,6 +8,5 @@ public class Unit
 
 	// overriding dynamic binding
 	public void attack(){}
-	public void run(){}
 	public void stop(){}
 }

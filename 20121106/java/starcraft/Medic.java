@@ -1,5 +1,5 @@
 
-public class Medic extends Unit 
+public class Medic extends Unit implements Runable 
 {
 
 	public Medic()
