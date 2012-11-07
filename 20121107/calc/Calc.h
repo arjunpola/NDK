@@ -23,6 +23,14 @@ JNIEXPORT jint JNICALL Java_Calc_add
 JNIEXPORT jint JNICALL Java_Calc_sub
   (JNIEnv *, jobject, jint, jint);
 
+/*
+ * Class:     Calc
+ * Method:    getHelloWorld
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_Calc_getHelloWorld
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif

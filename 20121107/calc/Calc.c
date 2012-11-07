@@ -12,3 +12,8 @@ JNIEXPORT jint JNICALL Java_Calc_sub
 	return a-b;
 }
 
+JNIEXPORT jstring JNICALL Java_Calc_getHelloWorld
+  (JNIEnv *pEnv, jclass clazz)
+{
+	return (*pEnv)->NewStringUTF(pEnv,"hello, world");
+}
