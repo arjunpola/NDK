@@ -1,5 +1,6 @@
 #include "Array.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 JNIEXPORT void JNICALL Java_Array_printIntArr
   (JNIEnv *pEnv, jobject thiz, jintArray arr)
@@ -47,3 +48,44 @@ JNIEXPORT void JNICALL Java_Array_printCharArr
 
 }
 
+JNIEXPORT jintArray JNICALL Java_Array_makeIntArr
+  (JNIEnv *pEnv, jobject thiz, jint len)
+{
+	// make temprary dynamic array
+	// init array
+	// copy to jintArray(VM make it)
+	// free array
+
+	jint *pArr;
+	int i;
+	jintArray jintArr;
+
+	pArr = malloc(sizeof(jint)*(int)len);
+	for( i=0 ; i<len ; i++)
+		pArr[i] = i+1;
+
+	jintArr = (*pEnv)->NewIntArray(pEnv,len);
+
+	(*pEnv)->SetIntArrayRegion(pEnv, jintArr, 0, len, pArr);
+
+	free(pArr);
+	return jintArr;
+}
+
+JNIEXPORT jcharArray JNICALL Java_Array_makeCharArr
+  (JNIEnv *pEnv, jobject thiz, jint len)
+{
+	jchar *pArr;
+	int i;
+	jcharArray jcharArr;
+
+	pArr = malloc(sizeof(jchar)*(int)len);
+	for( i=0 ; i<len ; i++)
+		pArr[i] = 0x30+i;
+
+	jcharArr = (*pEnv)->NewCharArray(pEnv,len);
+
+	(*pEnv)->SetCharArrayRegion(pEnv, jcharArr,0, len, pArr);
+	free(pArr);
+	return jcharArr;
+}

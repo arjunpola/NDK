@@ -31,6 +31,22 @@ JNIEXPORT jint JNICALL Java_Array_getIntArrSum
 JNIEXPORT void JNICALL Java_Array_printCharArr
   (JNIEnv *, jobject, jcharArray);
 
+/*
+ * Class:     Array
+ * Method:    makeIntArr
+ * Signature: (I)[I
+ */
+JNIEXPORT jintArray JNICALL Java_Array_makeIntArr
+  (JNIEnv *, jobject, jint);
+
+/*
+ * Class:     Array
+ * Method:    makeCharArr
+ * Signature: (I)[C
+ */
+JNIEXPORT jcharArray JNICALL Java_Array_makeCharArr
+  (JNIEnv *, jobject, jint);
+
 #ifdef __cplusplus
 }
 #endif
