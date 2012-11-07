@@ -15,6 +15,46 @@ extern "C" {
 JNIEXPORT void JNICALL Java_Type_printInt
   (JNIEnv *, jobject, jint);
 
+/*
+ * Class:     Type
+ * Method:    printChar
+ * Signature: (C)V
+ */
+JNIEXPORT void JNICALL Java_Type_printChar
+  (JNIEnv *, jobject, jchar);
+
+/*
+ * Class:     Type
+ * Method:    printShort
+ * Signature: (S)V
+ */
+JNIEXPORT void JNICALL Java_Type_printShort
+  (JNIEnv *, jobject, jshort);
+
+/*
+ * Class:     Type
+ * Method:    printLong
+ * Signature: (J)V
+ */
+JNIEXPORT void JNICALL Java_Type_printLong
+  (JNIEnv *, jobject, jlong);
+
+/*
+ * Class:     Type
+ * Method:    printFloat
+ * Signature: (F)V
+ */
+JNIEXPORT void JNICALL Java_Type_printFloat
+  (JNIEnv *, jobject, jfloat);
+
+/*
+ * Class:     Type
+ * Method:    printDouble
+ * Signature: (D)V
+ */
+JNIEXPORT void JNICALL Java_Type_printDouble
+  (JNIEnv *, jobject, jdouble);
+
 #ifdef __cplusplus
 }
 #endif
