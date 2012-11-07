@@ -63,6 +63,14 @@ JNIEXPORT void JNICALL Java_Array_printInt2DArr
 JNIEXPORT void JNICALL Java_Array_printChar2DArr
   (JNIEnv *, jobject, jobjectArray, jint, jint);
 
+/*
+ * Class:     Array
+ * Method:    makeInt2DArr
+ * Signature: (II)[[I
+ */
+JNIEXPORT jobjectArray JNICALL Java_Array_makeInt2DArr
+  (JNIEnv *, jobject, jint, jint);
+
 #ifdef __cplusplus
 }
 #endif

@@ -10,6 +10,7 @@ public class Array
 	public native char[] makeCharArr(int len);
 	public native void printInt2DArr(int[][] arr,int row,int col);
 	public native void printChar2DArr(char[][] arr,int row,int col);
+	public native int[][] makeInt2DArr(int row,int col);
 
 	public static void main(String[] args)
 	{
@@ -46,6 +47,19 @@ public class Array
 
 		char[][] charArr2D = { {'a','b','c'},{'d','e','f'},{'g','h','i'}};
 		a.printChar2DArr(charArr2D,3,3);
+
+
+		System.out.println("------------------------------------------------");
+		int[][] int2DArr2 = a.makeInt2DArr(3,3);
+		System.out.println("[Java] int2DArr form c ");
+		for( int i =0 ; i<3; i++)
+		{
+			for(int j=0 ; j<3 ; j++)
+			{
+				System.out.print("[" + int2DArr2[i][j] + "]");
+			}
+			System.out.println("");
+		}
 
 
 

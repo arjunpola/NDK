@@ -146,3 +146,50 @@ JNIEXPORT void JNICALL Java_Array_printChar2DArr
 	}
 	free(pArr);
 }
+
+JNIEXPORT jobjectArray JNICALL Java_Array_makeInt2DArr
+  (JNIEnv *pEnv, jobject thiz, jint row, jint col)
+{
+	jobjectArray objArr;
+	jclass intArrClass;
+	int i;
+	int data = 1;
+
+	// 1.  Find class to make int array object
+	intArrClass = (*pEnv)->FindClass(pEnv,"[I");
+	if(intArrClass == NULL)
+	{
+		printf( "[c] FindClass failed\n");
+		return NULL;
+	}
+
+	objArr = (*pEnv)->NewObjectArray(pEnv, row, intArrClass, NULL);
+	if( objArr == NULL )
+	{
+		printf("[c] NewObjectArray failed\n");
+		return NULL;
+	}
+
+	for( i=0 ; i<row; i++)
+	{
+		jint tempArr[128];
+		int j;
+
+		jintArray jintArr = (*pEnv)->NewIntArray(pEnv, col);
+		if( jintArr == NULL) 
+		{
+			printf("[c] NewIntArray failed\n");
+			return NULL;
+		}
+		for( j=0 ; j<col ; j++)
+		{
+			tempArr[j] = data++;
+		}
+		(*pEnv)->SetIntArrayRegion(pEnv, jintArr, 0, col, tempArr);
+		(*pEnv)->SetObjectArrayElement(pEnv, objArr, i, jintArr);
+		(*pEnv)->DeleteLocalRef(pEnv, jintArr);
+	}
+
+	return objArr;
+
+}
