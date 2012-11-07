@@ -8,6 +8,8 @@ public class Array
 	public native void printCharArr(char[] arr);
 	public native int[] makeIntArr(int len);
 	public native char[] makeCharArr(int len);
+	public native void printInt2DArr(int[][] arr,int row,int col);
+	public native void printChar2DArr(char[][] arr,int row,int col);
 
 	public static void main(String[] args)
 	{
@@ -34,5 +36,18 @@ public class Array
 		for(char c : intChar2)
 			System.out.print("["+c+"]");
 		System.out.println(" ");
+
+
+		System.out.println("------------------------------------------------");
+
+		int[][] intArr2D = { {1,2,3} , { 4,5,6}};
+		a.printInt2DArr(intArr2D,2,3);
+		System.out.println("------------------------------------------------");
+
+		char[][] charArr2D = { {'a','b','c'},{'d','e','f'},{'g','h','i'}};
+		a.printChar2DArr(charArr2D,3,3);
+
+
+
 	}
 }

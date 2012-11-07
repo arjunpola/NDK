@@ -89,3 +89,60 @@ JNIEXPORT jcharArray JNICALL Java_Array_makeCharArr
 	free(pArr);
 	return jcharArr;
 }
+
+JNIEXPORT void JNICALL Java_Array_printInt2DArr
+  (JNIEnv *pEnv, jobject thiz, jobjectArray objArr, jint row, jint col)
+{
+	int i, j;
+	jint (*pArr)[col];
+
+	pArr = malloc(sizeof(jint)*(int)row*(int)col);
+	for( i=0 ; i<row; i++)
+	{
+		jintArray jarr = (jintArray)(*pEnv)->GetObjectArrayElement(pEnv,objArr, i);
+		jint *arr = (*pEnv)->GetIntArrayElements(pEnv,jarr,NULL);
+		for(j=0; j<=col; j++)
+		{
+			pArr[i][j] = arr[j];
+		}
+	}
+
+	printf("[C] Print int Array2D from java = \n");
+	for( i=0 ; i<row ; i++)
+	{
+		for( j=0 ; j<col ; j++)
+		{
+			printf("[%d]",pArr[i][j]);
+		}
+		printf("\n");
+	}
+	free(pArr);
+}
+JNIEXPORT void JNICALL Java_Array_printChar2DArr
+  (JNIEnv *pEnv, jobject thiz, jobjectArray objArr, jint row, jint col)
+{
+	int i, j;
+	jchar (*pArr)[col];
+
+	pArr = malloc(sizeof(jchar)*(int)row*(int)col);
+	for( i=0 ; i<row; i++)
+	{
+		jcharArray jarr = (jcharArray)(*pEnv)->GetObjectArrayElement(pEnv,objArr, i);
+		jchar *arr = (*pEnv)->GetCharArrayElements(pEnv,jarr,NULL);
+		for(j=0; j<=col; j++)
+		{
+			pArr[i][j] = arr[j];
+		}
+	}
+
+	printf("[C] Print char Array2D from java = \n");
+	for( i=0 ; i<row ; i++)
+	{
+		for( j=0 ; j<col ; j++)
+		{
+			printf("[%c]",pArr[i][j]);
+		}
+		printf("\n");
+	}
+	free(pArr);
+}
