@@ -10,6 +10,8 @@ public class Type
 	public native void printFloat(float f);
 	public native void printDouble(double d);
 	public native void printBoolean(boolean b);
+    
+	public native void printString(String ss);
 
 	public static void main(String [] arg)
 	{
@@ -33,5 +35,8 @@ public class Type
 
 		boolean b = true;
 		t.printBoolean(b);
+
+		String str = "GrandMother";
+		t.printString(str);
 	}
 }

@@ -55,6 +55,22 @@ JNIEXPORT void JNICALL Java_Type_printFloat
 JNIEXPORT void JNICALL Java_Type_printDouble
   (JNIEnv *, jobject, jdouble);
 
+/*
+ * Class:     Type
+ * Method:    printBoolean
+ * Signature: (Z)V
+ */
+JNIEXPORT void JNICALL Java_Type_printBoolean
+  (JNIEnv *, jobject, jboolean);
+
+/*
+ * Class:     Type
+ * Method:    printString
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_Type_printString
+  (JNIEnv *, jobject, jstring);
+
 #ifdef __cplusplus
 }
 #endif

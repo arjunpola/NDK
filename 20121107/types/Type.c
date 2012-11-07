@@ -10,7 +10,7 @@ JNIEXPORT void JNICALL Java_Type_printInt
 JNIEXPORT void JNICALL Java_Type_printChar
   (JNIEnv *pEnv, jobject thiz, jchar c) 
 {
-	printf("[C] char from java = %c",c );
+	printf("[C] char from java = %c\n",c );
 }
 
 
@@ -43,4 +43,11 @@ JNIEXPORT void JNICALL Java_Type_printBoolean
   (JNIEnv *pEnv, jobject thiz, jboolean b)
 {
 	printf("[C] boolean from java =  %d \n",b);
+}
+
+JNIEXPORT void JNICALL Java_Type_printString
+  (JNIEnv *pEnv, jobject thiz, jstring str)
+{
+	const char *pStr = (*pEnv)->GetStringUTFChars(pEnv,str,NULL);
+	printf("[C] string from Java = %s\n",pStr);
 }
