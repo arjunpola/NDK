@@ -7,6 +7,8 @@ public class Array
 
 	public native int getIntArrSum(int[] arr);
 
+	public native void printCharArr(char[] arr);
+
 	public static void main(String[] args)
 	{
 		Array a = new Array();
@@ -15,5 +17,8 @@ public class Array
 		a.printIntArr(intArr);
 		
 		System.out.println("Java print arr sum : " + a.getIntArrSum(intArr));
+
+		char[] charArr = { 'a','b','c','d','e','f','g'};
+		a.printCharArr(charArr);
 	}
 }
