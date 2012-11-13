@@ -143,6 +143,19 @@
     "javaRuntime": true
   },
   {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "612846c9857077a039b533718f72db3bc041d389",
+    "jarFileModificationDate": "2012-11-08T22:05:46-08:00",
+    "location": "/root/NDK/workspace/MyNativeActive/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -164,7 +177,7 @@
       "qualifier": ""
     },
     "jarFileFingerprint": "612846c9857077a039b533718f72db3bc041d389",
-    "jarFileModificationDate": "2012-11-08T17:21:25-08:00",
+    "jarFileModificationDate": "2012-11-08T18:41:38-08:00",
     "location": "/root/NDK/workspace/AndroidBitmap1/libs/android-support-v4.jar",
     "javaRuntime": false
   },
@@ -195,19 +208,6 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "9252d68643b9293846ad74a17f343f65493845af",
-    "jarFileModificationDate": "2008-04-17T01:06:15-08:00",
-    "location": "/usr/lib/jvm/java-6-sun-1.6.0.06/jre/lib/charsets.jar",
-    "javaRuntime": true
-  },
-  {
     "symbolicName": "android-support-v4",
     "version": {
       "major": -1,
@@ -219,5 +219,18 @@
     "jarFileModificationDate": "2012-11-07T21:15:47-08:00",
     "location": "/root/NDK/workspace/SimplePaint/libs/android-support-v4.jar",
     "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9252d68643b9293846ad74a17f343f65493845af",
+    "jarFileModificationDate": "2008-04-17T01:06:15-08:00",
+    "location": "/usr/lib/jvm/java-6-sun-1.6.0.06/jre/lib/charsets.jar",
+    "javaRuntime": true
   }
 ]

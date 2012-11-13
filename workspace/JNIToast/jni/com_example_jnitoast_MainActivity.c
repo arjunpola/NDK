@@ -20,7 +20,7 @@ JNIEXPORT void JNICALL Java_com_example_jnitoast_MainActivity_displayToast
 		LOGI("FindClass failed");
 		return;
 	}
-	makeText = (*pEnv)->GetStaticMethodID(pEnv, Toast,"makeText", "(Landroid/content/Context;L/java/lang/CharSequence;I)Landroid/widget/Toast;");
+	makeText = (*pEnv)->GetStaticMethodID(pEnv, Toast,"makeText", "(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;");
 	if( NULL == makeText )
 	{
 		LOGI("FindStaticMethod failed");
@@ -38,6 +38,6 @@ JNIEXPORT void JNICALL Java_com_example_jnitoast_MainActivity_displayToast
 		LOGI("GetMethodID Failed");
 		return;
 	}
-	(*pEnv)->CallObjectMethod(pEnv,toast,show);
+	(*pEnv)->CallVoidMethod(pEnv,toast,show);
 
 }
